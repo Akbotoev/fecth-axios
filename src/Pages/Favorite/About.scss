@@ -1,0 +1,57 @@
+.favorite-list {
+  display: flex;
+  flex-wrap: wrap; // Позволяет товарам переноситься на следующую строку
+  gap: 20px; // Отступы между товарами
+  justify-content: center; // Центрируем товары
+
+  // Если хотите добавить боковые отступы для небольших экранов
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
+  // Стили для товара внутри списка
+  .product-card {
+    background-color: #fff; // Белый фон
+    border-radius: 10px; // Скругленные углы
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Легкая тень
+    padding: 20px; // Отступы внутри карточки
+    width: 300px; // Ширина каждой карточки
+    text-align: center; // Центровка текста
+    transition: transform 0.3s ease; // Анимация на hover
+
+    &:hover {
+      transform: translateY(-10px); // Карточка "поднимается" при наведении
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px; // Скругленные углы для изображения
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    button {
+      background-color: #007bff; // Синий фон кнопки
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3; // Темнее на hover
+      }
+    }
+  }
+}
